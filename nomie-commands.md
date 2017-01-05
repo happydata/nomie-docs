@@ -36,3 +36,33 @@ Creates a New Tracker!
 - **notePrompt** - optional - true / false - defaults to false
 - **interactive** - optional - true / false - defaults to false - if the user should be taken to the Tracker Editor screen after creating this tracker.
 
+## Create Note
+
+Creates a Note within Nomie
+
+- ``action=create-note/note=its%20a%20start``
+
+**Params**
+
+- **note** - REQUIRED - the Note Content
+
+
+## Start Note
+
+Launches Note editor with content preset.
+
+- ``action=start-note/note=its%20a%20start``
+
+**Params**
+
+- **note** - REQUIRED - the Note Content
+
+## Preview Cloud App
+
+Launch a Cloud App's join page. 
+
+- ``action=preview-cloud-app/url=http%3A%2F%2Fbigspender.nomie.org%2Fjoin``
+
+**Params**
+
+- **url** - REQUIRED - url to Cloud App's join JSON document 
