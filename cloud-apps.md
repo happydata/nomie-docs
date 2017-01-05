@@ -102,3 +102,33 @@ var join =
 			    },
 			    **color** : '#4A90E2',
 			    **icon** : **flaticon-thermometer21**
+
+## Responding to Nomie
+
+The response from your Cloud App needs to be a simple JSON response (examples below). There are a few different ways to responde to the user.
+
+1. **HTML** Display a block of HTML to the user within Nomie. 
+2. **Notification** Display a small toast notification
+3. **Link** Take to a specific web page. 
+
+### Showing HTML 
+```
+{
+   title : "My response page title",
+   html: "<div class='text-bold'>Hello World</div>"
+}
+```
+
+## Notification 
+```
+{
+   notify: "Hello World"
+}
+```
+
+## Open URL 
+```
+{
+   link: "https://nomie.io"
+}
+```
