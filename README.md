@@ -6,5 +6,10 @@ Welcome to Nomie Docs, the home page of all things Nomie. Beware, it's going to 
 
 ## For Developers & API Subscribers
 
+- **[Nomie API Tutorial](https://github.com/happydata/tutorial-nomie-api)** Learn how to use the Nomie API.
 - **[Nomie Commands](./nomie-commands.md)** how to tell Nomie what to do. Commands are used in both Cloud Apps and the Nomie API. 
 - **[Cloud Apps](./cloud-apps.md)** are  web based services any developer can build to monitor and report on user activity ONLY for trackers they have specifically designated.
+
+## Looking for access to the Nomie API? 
+
+[Signup and get your subscription here](https://connect.nomie.io)
