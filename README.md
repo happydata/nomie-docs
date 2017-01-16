@@ -4,11 +4,16 @@
 
 Welcome to Nomie Docs, the home page of all things Nomie. Beware, it's going to be bare for a while. As I have time I'll continue to add to to this area, in the meantime, if you're hacking Nomie, hit me up at suppot@happydata.org, and I can help you directly. 
 
-## For Developers & API Subscribers
+## Technology Overview
 
 - **[Nomie API Tutorial](https://github.com/happydata/tutorial-nomie-api)** Learn how to use the Nomie API.
 - **[Nomie Commands](./nomie-commands.md)** how to tell Nomie what to do. Commands are used in both Cloud Apps and the Nomie API. 
 - **[Cloud Apps](./cloud-apps.md)** are  web based services any developer can build to monitor and report on user activity ONLY for trackers they have specifically designated.
+
+## Nomie API Tools
+
+- **[Alexa to Nomie](https://github.com/huberf/nomiealexa)** Tell Alexa to track for you - by @huberf  
+- **[Telegram Nomie Bot](https://github.com/julkku/telegram-nomie-bot)** Chat with Nomie using Telegram and this starter kit from @julkku 
 
 ## Looking for access to the Nomie API? 
 
