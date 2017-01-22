@@ -6,6 +6,8 @@ leverage the Nomie API to automatically track, write notes and more.
 
 ## Highlevel Cloud App Overview.
 
+![](http://snap.icorbin.com/add-3rd-party-nomie-cloud-app.png)
+
 ### How a Cloud App is installed.
 
 Cloud Apps can be installed from within Nomie's App browser, or by manually entering the URL to a Cloud Apps Join JSON document. 
