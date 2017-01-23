@@ -1,20 +1,27 @@
-# Nomie Docs.
+Welcome to Nomie Docs. Pull requests welcomed.
 
-![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
+# Nomie API
 
-Welcome to Nomie Docs, the home page of all things Nomie. Beware, it's going to be bare for a while. As I have time I'll continue to add to to this area, in the meantime, if you're hacking Nomie, hit me up at suppot@happydata.org, and I can help you directly. 
-
-## Technology Overview
+Automatically track your life with the Nomie API! [Get your subscription here](https://connect.nomie.io)
 
 - **[Nomie API Tutorial](https://github.com/happydata/tutorial-nomie-api)** Learn how to use the Nomie API.
-- **[Nomie Commands](./nomie-commands.md)** how to tell Nomie what to do. Commands are used in both Cloud Apps and the Nomie API. 
-- **[Cloud Apps](./cloud-apps.md)** are  web based services any developer can build to monitor and report on user activity ONLY for trackers they have specifically designated.
+- **[Nomie Commands](./nomie-commands.md)** how to tell Nomie what to do. Commands are used in both Cloud Apps and the Nomie API.
 
-## Nomie API Tools
+### 3rd Party Apps using the Nomie API
 
 - **[Alexa to Nomie](https://github.com/huberf/nomiealexa)** Tell Alexa to track for you - by @huberf  
-- **[Telegram Nomie Bot](https://github.com/julkku/telegram-nomie-bot)** Chat with Nomie using Telegram and this starter kit from @julkku 
+- **[Telegram Nomie Bot](https://github.com/julkku/telegram-nomie-bot)** Chat with Nomie using Telegram and this starter kit from @julkku
 
-## Looking for access to the Nomie API? 
 
-[Signup and get your subscription here](https://connect.nomie.io)
+
+
+# Nomie Cloud Apps
+**[Cloud Apps](./cloud-apps.md)** are  web based services any developer can build to monitor and report on user activity ONLY for trackers they have specifically designated.
+
+### Code Examples
+
+- [Big Spender (js)](https://github.com/happydata/cloudapp-bigspender) - track weekly spending
+- [Weather Tracker (js)](https://github.com/happydata/cloudapp-weather) - automatically track the weather
+- [PHP Sample Cloud App (php)](https://github.com/happydata/cloudapp-php-example) - a super simple  PHP example
+
+![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
