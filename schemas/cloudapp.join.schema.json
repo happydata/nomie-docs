@@ -56,8 +56,8 @@
                     "description": "If the slot is required to be filled before it can run"
                 },
                 "recommended": {
-                    "type": "object",
-                    "description": "A Tracker Scheme references needs to be here"
+                    "$ref": "https://raw.githubusercontent.com/happydata/nomie-docs/master/schemas/tracker.schema.json#/"
+                    "description" : "A Tracker Scheme references needs to be here"
                 }
             },
             "required": ["label"]
