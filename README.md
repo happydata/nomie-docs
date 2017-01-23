@@ -1,10 +1,17 @@
 Welcome to Nomie Docs. Pull requests welcomed.
 
-**Quick Resources**
+
+** Get Nomie **
+
 - [Nomie Pro Android](https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en)
 - [Nomie Pro iOS](https://itunes.apple.com/us/app/nomie-pro/id1190618299?mt=8)
+
+**Quick Resources**
+
 - [Nomie Tips](./nomie-tips.md)
-- [Nomie API Login / Subscribe](https://connect.nomie.io)
+- [API Login / Subscribe](https://connect.nomie.io)
+- [API Documentation](https://github.com/happydata/tutorial-nomie-api)
+- [Cloud App Documentation](./cloud-apps.md)
 
 # Nomie API
 (the **not free** part of Nomie)
