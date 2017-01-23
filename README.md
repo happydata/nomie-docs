@@ -1,7 +1,4 @@
-Welcome to Nomie Docs. Pull requests welcomed.
-
-
-** Get Nomie **
+**Get Nomie**
 
 - [Nomie Pro Android](https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en)
 - [Nomie Pro iOS](https://itunes.apple.com/us/app/nomie-pro/id1190618299?mt=8)
