@@ -1,0 +1,134 @@
+{
+	"title": "Nomie Cloud App Join",
+	"type": "object",
+	"definitions" : {
+		"input" : {
+			"type" : "object",
+			"description" : "An input for the user to pass to the cloud app",
+			"properties" : {
+				"label" : {
+					"type" : "string",
+					"description" : "The label for this Input - for example: Your Name"
+				},
+				"placeholder" : {
+					"type" : "string",
+					"description" : "Placeholder for your input if it's a text type"
+				},
+				"type" : {
+					"enum" : ["text","password","select","boolean"]
+				},
+				"value" : {
+					"type" : ["number","null","string"],
+					"description" : "Value of the Input"
+				},
+				"required" : {
+					"type" : "boolean",
+					"description" : "Is this a required input?"
+				},
+				"options" : {
+					"type" : "array",
+					"description" : "Options for a select type",
+					"items" : [{
+							"label" : {
+								"type" : "string"
+							},
+							"value" : {
+								"type" : ["string","number", "null"]
+							}
+					}]
+				}
+			}
+		},
+		"slot" : {
+			"type" : "object",
+			"description" : "A slot to hold a users tracker and tracker data",
+			"properties" : {
+				"label" : {
+					"type" : "string",
+					"description" : "Name of the slot - e.g. Hours slept"
+				},
+				"summary" : {
+					"type" : ["string","null"],
+					"description" : "A description of the tracker, if needed"
+				},
+				"required" : {
+					"type" : "boolean",
+					"description" : "If the slot is required to be filled before it can run"
+				},
+				"recommended" : {
+					"type" : "object",
+					"description" : "A Tracker Scheme references needs to be here"
+				}
+			},
+			"required" : ["label"]
+		}
+	},
+	"properties": {
+		"id" : {
+			"type" : "string",
+			"description" : "Unique Identifier for this app"
+		},
+		"name" : {
+			"type" : "string",
+			"description" : "Name of this App"
+		},
+		"summary" : {
+			"type" : "string",
+			"description" : "Description of the app"
+		},
+		"color" : {
+			"type" : "string",
+			"description" : "Primary color of this app"
+		},
+		"img" : {
+			"type" : "string",
+			"description" : "Full url to SQUARE image for this app. (svg,png)"
+		},
+		"hostedBy" : {
+			"type" : "string",
+			"description" : "Name of the person or company responsible for this app"
+		},
+		"uses" : {
+			"type" : "array",
+			"items" : [{
+					"enum" : ["geo","commands","api","last-location"]
+			}],
+			"description" : "Array of data attributes this cloud app needs to function. geo: get the location of each event for selected trackers, commands: access to fire off commands when the app runs. api : access to the users API key,  last-location: the last known location for this user."
+		},
+		"join" : {
+			"type" : "string",
+			"description" : "Full URL to the JOIN json data"
+		},
+		"collection" : {
+			"type" : "object",
+			"properties" : {
+				"method" : {
+					"enum" : ["automatic","manual"],
+					"description" : "Should this app run automatically or only when the user runs it"
+				},
+				"frequency" : {
+					"type" : "string",
+					"description" : "How often should this app run if its to run automatically? 1mm = 1 month, 1d = 1 day, 2h = 2 hours, 3m = 3 minutes"
+				},
+				"amount" : {
+					"type" : "string",
+					"description" : "How far back should we go to collect data?  1mm = 1 month, 1d = 1 day, 2h = 2 hours, 3m = 3 minutes, latest = most recent"
+				},
+				"url" : {
+					"type" : "string",
+					"description" : "Fully qualified URL to the capture portion of the cloud app"
+				}
+			},
+			"required" : ["url","method"]
+		},
+		"slots" : {
+			"type": "object",
+			"additionalProperties" : { "$ref": "#/definitions/slot" }
+		},
+		"info" : {
+			"type": "object",
+			"additionalProperties" : { "$ref": "#/definitions/input" }
+		}
+	},
+	"required": ["id","join","uses","color","name","img"]
+}
