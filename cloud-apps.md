@@ -4,6 +4,12 @@ Nomie Cloud Apps are external web services that can manually or automatically
 collect specific data from Nomie for processing off the device. Cloud Apps can also
 leverage the Nomie API to automatically track, write notes and more.
 
+## Cloud App Examples
+
+- [Big Spender (js)](https://github.com/happydata/cloudapp-bigspender) - track weekly spending
+- [Weather Tracker (js)](https://github.com/happydata/cloudapp-weather) - automatically track the weather
+- [PHP Sample Cloud App (php)](https://github.com/happydata/cloudapp-php-example) - a super simple example of an app with PHP 
+
 ## Highlevel Cloud App Overview.
 
 ![](http://snap.icorbin.com/add-3rd-party-nomie-cloud-app.png)
@@ -74,7 +80,7 @@ var join =
 -	**join**: **"https://myurl.com/join.json"** The url to this current document,
 -	**more**: **"https://myurl.com"** A link to your marketing website
 - **privacy** : **"https://myurl.com/privacy"** A link to your privacy policy
-- **collection** - Defines how this app will be collecting data from the user. 
+- **collection** - Defines how this app will be collecting data from the user.
  -	**method**  automatic or manual
  -	**frequency**: **1d** - every 1 day. Options 5h (hours), 22m (22 minutes), 1mm (1 month),
  -	**url**: **https://api.nomie.io/apps/weather**,
