@@ -12,7 +12,9 @@ Automatically track your life with the Nomie API! [Get your subscription here](h
 - **[Alexa to Nomie](https://github.com/huberf/nomiealexa)** Tell Alexa to track for you - by @huberf  
 - **[Telegram Nomie Bot](https://github.com/julkku/telegram-nomie-bot)** Chat with Nomie using Telegram and this starter kit from @julkku
 
+# 3rd Party Apps
 
+## Noah's Coffee Tracker (use code: ``noah`` or [open with Nomie Pro](nomiepro://action=code/code=noah))
 
 
 # Nomie Cloud Apps
