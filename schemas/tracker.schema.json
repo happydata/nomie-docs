@@ -1,0 +1,77 @@
+{
+	"title": "Nomie Tracker Schema",
+	"type": "object",
+	"definitions" : {
+		"chargeCondition": {
+      "type": "object",
+      "properties": {
+        "charge": { "enum" : [-2,-1,0,1,2], "description": "The final charge if this condition is true. " },
+        "compare": { "type": "number", "description": "The amount to compare against " },
+        "cond":  {
+						"type": "string",
+						"description": "Options include lt, lte, gt, eq, ",
+						"enum" : ["lt","lte","eq","gte","gt"]
+				}
+      },
+      "required": ["charge", "cond", "compare"]
+    }
+	},
+	"properties": {
+		"_id": {
+			"type": "string"
+		},
+		"label": {
+			"description" : "The Label of the Tracker",
+			"type": "string"
+		},
+		"icon": {
+			"description" : "The trackers Icon",
+			"type": "string"
+		},
+		"charge": {
+			"description" : "The Charge for this event - if not dynamic",
+			"enum" : [-2,-1,0,1,2,null]
+		},
+		"color": {
+			"description" : "The trackers color",
+			"type": "string"
+		},
+		"lid" : {
+			"description" : "A generic source id - this is not currently used.",
+			"type": ["null","string"]
+		},
+		"config" : {
+			"description" : "The Trackers advanced configuration",
+			"type" : "object",
+			"properties" : {
+				"type" : {
+					"type" : "string",
+					"enum" : ["tick","range","numeric","timer"]
+				},
+				"dynamicCharge" : {
+					"type" : "boolean",
+					"description" : "Should the charge be calculated dynamically?"
+				},
+				"chargeFunc" : {
+					"type" : "array",
+					"items" : [{ "$ref": "#/definitions/chargeCondition" }]
+				},
+				"math" : {
+					"type" : "string",
+					"enum" : ["sum","mean"]
+				},
+				"max" : {
+					"type" : "number"
+				},
+				"min" : {
+					"type" : "number"
+				},
+				"uom" : {
+					"type" : ["string","null"],
+					"description" : "Unit of measurement https://github.com/happydata/nomie-uom"
+				}
+			}
+		}
+	},
+	"required": ["label", "color"]
+}
