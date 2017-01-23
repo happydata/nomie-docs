@@ -1,18 +1,27 @@
 Welcome to Nomie Docs. Pull requests welcomed.
 
-# Nomie API
+**Quick Resources**
+- [Nomie Pro Android](https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en)
+- [Nomie Pro iOS](https://itunes.apple.com/us/app/nomie-pro/id1190618299?mt=8)
+- [Nomie Tips](./nomie-tips.md)
+- [Nomie API Login / Subscribe](https://connect.nomie.io)
 
-Automatically track your life with the Nomie API! [Get your subscription here](https://connect.nomie.io)
+# Nomie API
+(the **not free** part of Nomie)
+
+Track automatically without opening Nomie! [Get your subscription here for $9.99USD a year](https://connect.nomie.io)
+
+With the API you can record events for any existing tracker, create notes and even install new trackers - all with a simple URL.
 
 - **[Nomie API Tutorial](https://github.com/happydata/tutorial-nomie-api)** Learn how to use the Nomie API.
 - **[Nomie Commands](./nomie-commands.md)** how to tell Nomie what to do. Commands are used in both Cloud Apps and the Nomie API.
 
-### 3rd Party Apps using the Nomie API
+### 3rd Party tools using the Nomie API
 
 - **[Alexa to Nomie](https://github.com/huberf/nomiealexa)** Tell Alexa to track for you - by @huberf  
 - **[Telegram Nomie Bot](https://github.com/julkku/telegram-nomie-bot)** Chat with Nomie using Telegram and this starter kit from @julkku
 
-# 3rd Party Apps
+# 3rd Party Cloud Apps
 
 ### Noah's Coffee Tracking
 
