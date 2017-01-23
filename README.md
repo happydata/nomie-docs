@@ -14,7 +14,9 @@ Automatically track your life with the Nomie API! [Get your subscription here](h
 
 # 3rd Party Apps
 
-## Noah's Coffee Tracker (use code: ``noah`` or [open with Nomie Pro](nomiepro://action=code/code=noah))
+### Noah's Coffee Tracking
+
+Track your Coffee usage - use code: ``noah`` or [open with Nomie Pro](nomiepro://action=code/code=noah)
 
 
 # Nomie Cloud Apps
