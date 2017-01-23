@@ -8,7 +8,7 @@ leverage the Nomie API to automatically track, write notes and more.
 
 - [Big Spender (js)](https://github.com/happydata/cloudapp-bigspender) - track weekly spending
 - [Weather Tracker (js)](https://github.com/happydata/cloudapp-weather) - automatically track the weather
-- [PHP Sample Cloud App (php)](https://github.com/happydata/cloudapp-php-example) - a super simple example of an app with PHP 
+- [PHP Sample Cloud App (php)](https://github.com/happydata/cloudapp-php-example) - a super simple  PHP example 
 
 ## Highlevel Cloud App Overview.
 
