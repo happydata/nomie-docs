@@ -41,4 +41,12 @@ Track your Coffee usage - use code: ``noah``
 - [Weather Tracker (js)](https://github.com/happydata/cloudapp-weather) - automatically track the weather
 - [PHP Sample Cloud App (php)](https://github.com/happydata/cloudapp-php-example) - a super simple  PHP example
 
+### Buttons 
+
+![Nomie SVG Button](https://s3.amazonaws.com/cdn.nomie.io/logos/track-with-nomie-button.svg)
+
+ ``https://s3.amazonaws.com/cdn.nomie.io/logos/track-with-nomie-button.svg``
+
+
+
 ![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
