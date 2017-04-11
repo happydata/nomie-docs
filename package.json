@@ -1,0 +1,23 @@
+{
+  "name": "nomie-docs",
+  "version": "1.0.0",
+  "description": "![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happydata/nomie-docs.git"
+  },
+  "author": "Happy Data <support@happydata.org> (nomie)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/happydata/nomie-docs/issues"
+  },
+  "homepage": "https://github.com/happydata/nomie-docs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-s3": "^0.11.0"
+  }
+}

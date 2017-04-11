@@ -1,4 +1,4 @@
-![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
+![](https://cdn.nomie.io/logos/2.0/nomie-logo-horizontal.png)
 
 # Get Nomie
 
@@ -24,10 +24,10 @@ If you're phone supports it, use **Nomie Pro**. Otherwise, you'll need to use th
 
 ### Buttons
 
-![Nomie SVG Button](https://s3.amazonaws.com/cdn.nomie.io/logos/track-with-nomie-button.svg)
+![Nomie SVG Button](https://cdn.nomie.io/logos/track-with-nomie-button.svg)
 
  ``https://s3.amazonaws.com/cdn.nomie.io/logos/track-with-nomie-button.svg``
 
 
 
-![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
+![](https://cdn.nomie.io/logos/2.0/nomie-logo-horizontal.png)
