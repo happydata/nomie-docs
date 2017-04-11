@@ -1,0 +1,415 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Nomie API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="cloud-apps.html" />
+    
+    
+    <link rel="prev" href="Introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Introduction.html">
+            
+                <a href="Introduction.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="nomie-api.html">
+            
+                <a href="nomie-api.html">
+            
+                    
+                    Nomie API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="cloud-apps.html">
+            
+                <a href="cloud-apps.html">
+            
+                    
+                    Cloud Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="nomie-commands.html">
+            
+                <a href="nomie-commands.html">
+            
+                    
+                    Nomie Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="couchdb-setup.html">
+            
+                <a href="couchdb-setup.html">
+            
+                    
+                    CouchDB / Nomie Syncing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../user-guide/nomie-tips.html">
+            
+                <a href="../user-guide/nomie-tips.html">
+            
+                    
+                    Nomie Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../user-guide/3rd-party-cloudapps.html">
+            
+                <a href="../user-guide/3rd-party-cloudapps.html">
+            
+                    
+                    3rd Party Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Nomie API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="nomie-api-tutorial">Nomie API Tutorial</h1>
+<p>Nomie the app is, and will always be, free... The API, on the other hand, is not. The API is currently $9.99 a year. Sign up at <a href="https://connect.nomie.io" target="_blank">https://connect.nomie.io</a></p>
+<p>The Nomie API accepts a push command. This command is a loosely URI based string that contains an action followed by specific parameters to support that action.</p>
+<p>Commands can be sent via a GET request or a POST request.</p>
+<p><strong>GET Example</strong></p>
+<pre><code>https://api.nomie.io/v2/push/{apikey}/action=track/label=Peed
+</code></pre><p><strong>POST Example</strong>
+A Post is better when working with create-note or start-note, since it&apos;s easier to transport Markdown and text via a POST param instead of a GET parameter. Use whichever you like.</p>
+<pre><code>curl -k  -L -X POST -H &apos;Content-Type: application/json&apos; -d &apos;{
+    apikey : {apikey}&apos;,
+    action : &quot;track&quot;,
+    label : &quot;Peed&quot;
+}&apos; &apos;https://api.nomie.io/v2/push&apos;
+</code></pre><h2 id="see-all-available-nomie-api-commands-here-&#x2192;"><a href="nomie-commands.html">See all Available Nomie API Commands here &#x2192;</a></h2>
+<h2 id="track-action">Track Action</h2>
+<p>The track action allows you to virtually track any of your installed trackers. If you request a tracked event from a tracker that you do not have installed, it will simply be ignored and erased.</p>
+<pre><code>https://api.nomie.io/v2/push/{apikey}/action=track/label=Peed
+https://api.nomie.io/v2/push/{apikey}/action=track/label=Ate%20Food
+https://api.nomie.io/v2/push/{apikey}/action=track/label=Ate%20Food/geo=33.36,-117.08
+https://api.nomie.io/v2/push/{apikey}/action=track/label=Temp/value=123
+</code></pre><p><strong>Track Parameters</strong></p>
+<ul>
+<li><strong>label</strong> -  Label of tracker you&apos;re targeting (URL encoded). e.g. <code>label=Ate%20Dinner</code></li>
+<li><strong>charge</strong> - Positivity of this event. e.g. <code>/charge=-2</code></li>
+<li><strong>geo</strong> - Geo location of the event. e.g. <code>/geo=33.36,-117.08</code></li>
+<li><strong>time</strong> - Time from the epoch of the event. <strong>Note</strong> time is automatically recorded, use this only for putting things in the future or the past. e.g. <code>/time=1482888391633</code></li>
+<li><strong>value</strong> - Value of the event (if supported by tracker). e.g. <code>/value=34.54</code></li>
+</ul>
+<h2 id="working-with-notes">Working with Notes</h2>
+<p>Notes can be created in two ways, with a POST request or a GET request. Note that if you&apos;re requesting to create a note with a GET request
+the note must be encoded, otherwise it will fail.</p>
+<h3 id="create-note-action">Create Note Action</h3>
+<p><strong>Create Note Parameters</strong></p>
+<ul>
+<li><strong>note</strong> -  Body of your note. Markdown supported. e.g. <code>/note=hi%20there</code></li>
+<li><strong>charge</strong> - Positivity of this event. e.g. <code>/charge=-2</code></li>
+<li><strong>geo</strong> - Geo location of the event. e.g. <code>/geo=33.36,-117.08</code></li>
+</ul>
+<h2 id="example-ideas">Example Ideas</h2>
+<h3 id="track-the-temperature-with-ifttt">Track the Temperature with IFTTT</h3>
+<p>Have IFTTT post the temp each day to a &quot;Temp&quot; tracker that&apos;s Numeric and uses Averages for the calculation. You&apos;ll now be able to see how the temp, or whatever you track weather wise, affects you.</p>
+<h3 id="create-a-single-tap-widget-with-ifttt-android-ios">Create a Single Tap widget with IFTTT (Android, iOS)</h3>
+<p>Create a new Applet with the trigger as &quot;DO Button&quot; and action service as &quot;Maker&quot;. Use any API-URL as the URL. Now you can add a IFTTT widget to the home screen (or notification center on iOS), and select the new Applet!</p>
+<h3 id="send-ticks-from-any-pebble-smartwatch">Send ticks from any Pebble smartwatch</h3>
+<p>Use the <a href="https://apps.getpebble.com/en_US/application/567af43af66b129c7200002b?query=http&amp;section=watchapps" target="_blank">HTTP app for pebble</a>, and add API URLs, named after their tracker. Add the app to pebble favourites, and quickly make ticks, straight from the watch!</p>
+<h3 id="create-a-widget-with-workflow-ios">Create a Widget with Workflow (iOS)</h3>
+<p>Create a new workflow and add a &quot;Text&quot; element. Fill this with any API URL, and then add the action &quot;Get Contents of URL&quot; below the &quot;Text&quot; element. For a simple &quot;Tap&quot; tracker, these two elements are the only requirements, but to do more calculations use variables inside the &quot;Text&quot; element.</p>
+<h3 id="create-a-widget-with-tasker-android">Create a Widget with Tasker (Android)</h3>
+<p>Coming soon</p>
+<h3 id="create-an-amazon-alexa-skill">Create an Amazon Alexa Skill</h3>
+<p>Setup instructions at <a href="https://github.com/huberf/nomiealexa" target="_blank">github.com/huberf/nomiealexa</a>.</p>
+<h2 id="how-it-works">How it Works:</h2>
+<ol>
+<li>Your device registered an Anonyous ID, a Cloud App ID, and API Key and your Device ID (for push Notifications) <code>See below for how each are used</code>.</li>
+<li>Your API Key is validated</li>
+<li>If valid, your command string (/action=track/label=Peed) is added to a message queue waiting to be picked up.</li>
+<li>Nomie on your device will periodically check for any new command</li>
+<li>When new commands are found, they are validated, executed, and then removed from the message queue.</li>
+</ol>
+<h2 id="nomie-ids">Nomie Ids</h2>
+<ul>
+<li><strong>Anonymous Id</strong> - This is a unique string that is generated when you first start using Nomie. It is used to generate and validate the API Key and Cloud App Id.</li>
+<li><strong>API Key</strong> - This is a unique key that is needed to send PUSH commands to the Nomie API.</li>
+<li><strong>Cloud App Id</strong> - This unique ID is generated for each Cloud App you install and provides an ID for Cloud Apps to leverage, while not giving up your API key or Anonymous ID.</li>
+</ul>
+<p>Reseting your identity within the app, resets all ID&apos;s - effectively making your a new User according to cloud apps and Nomie&apos;s anonymous services.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Introduction.html" class="navigation navigation-prev " aria-label="Previous page: Development">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="cloud-apps.html" class="navigation navigation-next " aria-label="Next page: Cloud Apps">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Nomie API","level":"1.2.1","depth":2,"next":{"title":"Cloud Apps","level":"1.2.2","depth":2,"path":"development/cloud-apps.md","ref":"development/cloud-apps.md","articles":[]},"previous":{"title":"Development","level":"1.2","depth":1,"path":"development/Introduction.md","ref":"development/Introduction.md","articles":[{"title":"Nomie API","level":"1.2.1","depth":2,"path":"development/nomie-api.md","ref":"development/nomie-api.md","articles":[]},{"title":"Cloud Apps","level":"1.2.2","depth":2,"path":"development/cloud-apps.md","ref":"development/cloud-apps.md","articles":[]},{"title":"Nomie Commands","level":"1.2.3","depth":2,"path":"development/nomie-commands.md","ref":"development/nomie-commands.md","articles":[]},{"title":"CouchDB / Nomie Syncing","level":"1.2.4","depth":2,"path":"development/couchdb-setup.md","ref":"development/couchdb-setup.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"development/nomie-api.md","mtime":"2017-04-11T18:32:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-11T15:49:39.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

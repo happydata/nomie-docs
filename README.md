@@ -7,10 +7,10 @@
 
 **Quick Resources**
 
-- [Nomie Tips](./nomie-tips.md)
+- [Nomie Tips](/user-guide/nomie-tips.md)
 - [API Login / Subscribe](https://connect.nomie.io)
-- [API Documentation](https://github.com/happydata/tutorial-nomie-api)
-- [Cloud App Documentation](./cloud-apps.md)
+- [API Documentation](/development/tutorial-nomie-api)
+- [Cloud App Documentation](/development/cloud-apps.md)
 
 # Nomie API
 (the **not free** part of Nomie)

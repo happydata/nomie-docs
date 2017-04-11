@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CouchDB / Nomie Syncing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="nomie-commands.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Introduction.html">
+            
+                <a href="Introduction.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="nomie-api.html">
+            
+                <a href="nomie-api.html">
+            
+                    
+                    Nomie API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="cloud-apps.html">
+            
+                <a href="cloud-apps.html">
+            
+                    
+                    Cloud Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="nomie-commands.html">
+            
+                <a href="nomie-commands.html">
+            
+                    
+                    Nomie Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="couchdb-setup.html">
+            
+                <a href="couchdb-setup.html">
+            
+                    
+                    CouchDB / Nomie Syncing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../user-guide/nomie-tips.html">
+            
+                <a href="../user-guide/nomie-tips.html">
+            
+                    
+                    Nomie Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../user-guide/3rd-party-cloudapps.html">
+            
+                <a href="../user-guide/3rd-party-cloudapps.html">
+            
+                    
+                    3rd Party Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >CouchDB / Nomie Syncing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="nomie--couchdb-setup">Nomie / CouchDB Setup</h2>
+<h3 id="update-dont-want-to-setup-your-own-server">Update: Don&apos;t want to setup your own server?</h3>
+<p>Check out <a href="https://blog.nomie.io/nomie-syncing-backup-with-ibmcloudant/" target="_blank">this blog post on setting up IBM&apos;s Cloudant CouchDB</a>.</p>
+<h3 id="setup-your-own-couchdb-server">Setup your own CouchDB Server</h3>
+<p>2 years ago (as of this writing) I started building a little app to track my behaviors, moods and activities. Today that little app is called <a href="https://nomie.io" target="_blank">Nomie</a>, and it&apos;s used to track 125 different aspects of my life (sleeping, drinking, eating, sex, drugs, mood, love, knitting, and everything in between).</p>
+<p>One goal of mine for Nomie was full syncing between my iPad and my iPhone, without a centralized &quot;cloud&quot; server.  After many wrong turns and failed attempts, <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a> came out the victor with its  offline-first support, versioning and overall ease of use.</p>
+<p><strong>Tech Warning:</strong> If you&apos;re not comfortable using a (linux / mac) command line - stick with Dropbox syncing until I get an easier solution in place.  That being said, if you&apos;re willing to take the plunge, we&apos;re going to be setting up CouchDB on a Digital Ocean server.</p>
+<h1 id="1-setup-a-5-a-month-digital-ocean-server">1. Setup a $5 a month <a href="https://m.do.co/c/c39776e3cc11" target="_blank">Digital Ocean</a> server</h1>
+<p>Create a <a href="https://m.do.co/c/c39776e3cc11" target="_blank">Digital Ocean</a> account if you don&apos;t already have one.</p>
+<p>Next you&apos;ll need to setup an Ubuntu 14.04 Droplet. <a href="https://cloud.digitalocean.com/droplets/new?size=512mb&amp;region=nyc2&amp;distro=ubuntu&amp;distroImage=ubuntu-14-04-x64" target="_blank">Click here to setup an Ubuntu 14.04, 512mb server in the NY datacenter. </a></p>
+<p>Once you&apos;ve setup your sever, you&apos;ll be emailed the password for the root user (if you&apos;re not using SSH keys).</p>
+<p>You should be able to login to your new server using the following:</p>
+<p><code>ssh root@XXX.XXX.XXX</code></p>
+<p>replace XXX.XXX.XXX with your Droplets IP address</p>
+<h1 id="2-install-couch">2. Install Couch</h1>
+<h2 id="base-requirements">Base requirements</h2>
+<pre><code>apt-get update
+apt-get install software-properties-common -y
+add-apt-repository ppa:couchdb/stable -y
+apt-get update
+</code></pre><h2 id="remove-any-old-couchdb">Remove any old CouchDB</h2>
+<pre><code>apt-get remove couchdb couchdb-bin couchdb-common -y
+</code></pre><h2 id="install-fresh-couchdb">Install Fresh CouchDB</h2>
+<pre><code>apt-get install couchdb -y
+</code></pre><h1 id="3-configure-couch">3. Configure Couch</h1>
+<h2 id="setup-an-admin-user-named-nomie">Setup an admin user named <code>nomie</code></h2>
+<pre><code>HOST=http://localhost:5984
+curl -X PUT $HOST/_config/admins/nomie -d &apos;&quot;MYPASSWORD&quot;&apos;
+</code></pre><h2 id="setup-cors">Setup CORS</h2>
+<p>In order to for Nomie the app to communicate with your server, CouchDB needs to allow external calls to interact with its data, this is called <a href="http://docs.couchdb.org/en/1.3.0/cors.html" target="_blank">Cross-origin resource sharing</a>.</p>
+<pre><code>AUTHOST=http://nomie:MYPASSWORD@localhost:5984
+curl -X PUT $AUTHOST/_config/httpd/enable_cors -d &apos;&quot;true&quot;&apos;
+curl -X PUT $AUTHOST/_config/cors/origins -d &apos;&quot;*&quot;&apos;
+curl -X PUT $AUTHOST/_config/cors/credentials -d &apos;&quot;true&quot;&apos;
+curl -X PUT $AUTHOST/_config/cors/methods -d &apos;&quot;GET, PUT, POST, HEAD, DELETE&quot;&apos;
+curl -X PUT $AUTHOST/_config/cors/headers -d &apos;&quot;accept, authorization, content-type, origin, referer, x-csrf-token&quot;&apos;
+</code></pre><h2 id="allow-access-to-the-outside-world">Allow access to the outside world</h2>
+<pre><code>curl -X PUT $AUTHOST/_config/httpd/bind_address -d &apos;&quot;0.0.0.0&quot;&apos;
+</code></pre><h2 id="create-the-nomie-database">Create the Nomie database</h2>
+<p>Nomie will automatically push and pull data to the following database names  <strong>username</strong>_events, <strong>username</strong>_trackers, <strong>username</strong>_meta</p>
+<pre><code>curl -X PUT $AUTHOST/nomie_events
+curl -X PUT $AUTHOST/nomie_meta
+curl -X PUT $AUTHOST/nomie_trackers
+</code></pre><h1 id="4-test-the-connection">4. Test the connection</h1>
+<p>We should have everything we need to start syncing with <a href="https://nomie.io" target="_blank">Nomie</a>.</p>
+<h2 id="adding-your-account-to-nomie">Adding your account to Nomie</h2>
+<ol>
+<li>Tap the More (<strong>&#x2022;&#x2022;&#x2022;</strong>) tab.</li>
+<li>Tap <strong>Add Account</strong></li>
+<li>Tap <strong>Self Hosted</strong></li>
+</ol>
+<p><img src="http://snap.icorbin.com/Screen-Shot-2016-06-06-10-41-31.png" alt=""></p>
+<ol>
+<li>Disable &quot;Use Secure Connection&quot;</li>
+<li>Enter your IP address and port :5984</li>
+<li>Enter username and password</li>
+<li>Tap login</li>
+<li>If all goes well, you&apos;ll have the option to enable the connection and it should start syncing.</li>
+</ol>
+<h1 id="5-securing-your-server">5. Securing your Server</h1>
+<p>What we&apos;ve setup, is a good primer, <strong>but YOU SHOULD NOT USE THIS</strong> unless you plan to get a domain, and secure CouchDB.</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars" target="_blank">Get my domain to Digital Ocean </a></li>
+<li><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=48203146" target="_blank">Securing CouchDB with HTTPS</a></li>
+</ul>
+<h2 id="dont-want-to-mess-with-securing-a-server">Don&apos;t want to mess with Securing a server?</h2>
+<p>One option is to install CouchDB on a computer at home. Nomie would then only sync when you&apos;re at home on the same network.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="nomie-commands.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Nomie Commands">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CouchDB / Nomie Syncing","level":"1.2.4","depth":2,"next":{"title":"User Guide","level":"1.3","depth":1,"ref":"","articles":[{"title":"Nomie Tips","level":"1.3.1","depth":2,"path":"user-guide/nomie-tips.md","ref":"user-guide/nomie-tips.md","articles":[]},{"title":"3rd Party Apps","level":"1.3.2","depth":2,"path":"user-guide/3rd-party-cloudapps.md","ref":"user-guide/3rd-party-cloudapps.md","articles":[]}]},"previous":{"title":"Nomie Commands","level":"1.2.3","depth":2,"path":"development/nomie-commands.md","ref":"development/nomie-commands.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"development/couchdb-setup.md","mtime":"2017-04-11T18:15:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-11T15:49:39.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
