@@ -9,7 +9,7 @@ Nomie is an app that allows you to track **ANYTHING** completely privately, with
 # Get Nomie
 
 Nomie Pro and Nomie (classic) are both free and available on the App Store and Google Play.
-If you're phone supports it, use **Nomie Pro**. Otherwise, you'll need to use the older Nomie (classic). Note, some API and Cloud App features are only available for Nomie Pro.
+If your phone supports it, use **Nomie Pro**. Otherwise, you'll need to use the older Nomie (classic). Note, some API and Cloud App features are only available for Nomie Pro.
 
 - [Nomie Pro Android](https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en)
 - [Nomie Pro iOS](https://itunes.apple.com/us/app/nomie-pro/id1190618299?mt=8)

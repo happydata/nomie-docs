@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/node,macos,gitbook
 
+dist/
+
 ### GitBook ###
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
