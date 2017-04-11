@@ -9,3 +9,4 @@
 * User Guide
 	* [Nomie Tips](user-guide/nomie-tips.md)
 	* [3rd Party Apps](user-guide/3rd-party-cloudapps.md)
+* [Nomie Todo / Wishlist](todo.md)
