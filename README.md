@@ -1,5 +1,11 @@
 ![](https://cdn.nomie.io/logos/2.0/nomie-logo-horizontal.png)
 
+# What is Nomie?
+
+Nomie is an app that allows you to track **ANYTHING** completely privately, with a single tap of a button. Oh yea, it's free too. [Learn more about Nomie at Nomie.io](https://nomie.io)
+
+![Nomie Pro Screens](https://nomie.io/images/nomie-pro-2-screens.png)
+
 # Get Nomie
 
 Nomie Pro and Nomie (classic) are both free and available on the App Store and Google Play.
@@ -21,13 +27,15 @@ If you're phone supports it, use **Nomie Pro**. Otherwise, you'll need to use th
 	* [3rd Party Apps](user-guide/3rd-party-cloudapps.md)
 * [Nomie Todo / Wishlist](todo.md)
 
+# Let's get social
+
+* [/r/nomie Subreddit](https://reddit.com/r/nomie)
+* [Facebook](https://facebook.com/nomieapp)
+* [Twitter](https://twitter.com/nomieapp)
+* [Instagram](https://instagram.com/nomie.io)
 
 ### Buttons
 
 ![Nomie SVG Button](https://cdn.nomie.io/logos/track-with-nomie-button.svg)
 
  ``https://s3.amazonaws.com/cdn.nomie.io/logos/track-with-nomie-button.svg``
-
-
-
-![](https://cdn.nomie.io/logos/2.0/nomie-logo-horizontal.png)

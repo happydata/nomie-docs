@@ -11,3 +11,5 @@ if you include your depression tracker, then you'd only be
 connected to other people who selected their depression tracker.
 
 ### Track with Friends Cloud App
+
+### Mac OS X and Windows Nomie Client

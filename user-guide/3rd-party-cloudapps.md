@@ -1,4 +1,4 @@
-## 3rd Party Cloud Apps
+## 3rd Party Cloud Apps and Services
 
 Nomie allow developers to create "Cloud Apps" that can pull and push data to Nomie users. [Learn more about Cloud Apps](../development/cloud-apps.md).
 
