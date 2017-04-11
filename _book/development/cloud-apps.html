@@ -1,0 +1,427 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cloud Apps · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nomie-commands.html" />
+    
+    
+    <link rel="prev" href="Introduction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Introduction.html">
+            
+                <a href="Introduction.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="cloud-apps.html">
+            
+                <a href="cloud-apps.html">
+            
+                    
+                    Cloud Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="nomie-commands.html">
+            
+                <a href="nomie-commands.html">
+            
+                    
+                    Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../user-guide/nomie-tips.html">
+            
+                <a href="../user-guide/nomie-tips.html">
+            
+                    
+                    User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Cloud Apps</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="nomie-cloud-app-documentation">Nomie Cloud App Documentation</h1>
+<p>Nomie Cloud Apps are external web services that can manually or automatically
+collect specific data from Nomie for processing off the device. Cloud Apps can also
+leverage the Nomie API to automatically track, write notes and more.</p>
+<h2 id="cloud-app-examples">Cloud App Examples</h2>
+<ul>
+<li><a href="https://github.com/happydata/cloudapp-bigspender" target="_blank">Big Spender (js)</a> - track weekly spending</li>
+<li><a href="https://github.com/happydata/cloudapp-weather" target="_blank">Weather Tracker (js)</a> - automatically track the weather</li>
+<li><a href="https://github.com/happydata/cloudapp-php-example" target="_blank">PHP Sample Cloud App (php)</a> - a super simple  PHP example </li>
+</ul>
+<h2 id="highlevel-cloud-app-overview">Highlevel Cloud App Overview.</h2>
+<p><img src="http://snap.icorbin.com/add-3rd-party-nomie-cloud-app.png" alt=""></p>
+<h3 id="how-a-cloud-app-is-installed">How a Cloud App is installed.</h3>
+<p>Cloud Apps can be installed from within Nomie&apos;s App browser, or by manually entering the URL to a Cloud Apps Join JSON document.</p>
+<p>Example JOIN json document</p>
+<pre><code>var join =
+{
+    &quot;id&quot;: &quot;io.nomie.apps.weather&quot;, // a Unique ID for your cloud app
+    &quot;name&quot;: &quot;Weather Tracker&quot;, // Name of the cloud app
+    &quot;img&quot;: &quot;http://snap.icorbin.com/weather-tracking.svg&quot;, // Keep it square
+    &quot;summary&quot;: &quot;Automatically Track the Temp&quot;,
+    &quot;uses&quot;: [&quot;last-location&quot;,&quot;api&quot;, &quot;geo&quot;],
+    &quot;color&quot;: &quot;#4A90E2&quot;,
+    &quot;hostedBy&quot;: &quot;Brandon Corbin&quot;,
+    &quot;join&quot;: &quot;https://api.nomie.io/apps/weather&quot;,
+    &quot;more&quot;: &quot;https://nomie.io&quot;,
+    &quot;collection&quot;: {
+        &quot;method&quot;: &quot;automatic&quot;,
+        &quot;frequency&quot;: &quot;1d&quot;,
+        &quot;url&quot;: &quot;https://api.nomie.io/apps/weather&quot;,
+        &quot;amount&quot;: &quot;1d&quot;
+    },
+    &quot;leave&quot;: &quot;https://api.nomie.io/apps/weather/leave&quot;,
+    &quot;info&quot;: {
+       &quot;units&quot; : {
+          &quot;type&quot; : &quot;select&quot;,
+          &quot;value&quot; : &quot;fahrenheit&quot;,
+          &quot;options&quot; : [
+            { label: &quot;Fahrenheit&quot;, value: &quot;fahrenheit&quot;},
+            { label: &quot;Celcius&quot;, value: &quot;celcius&quot;},
+          ],
+          label : &quot;Unit of Measure&quot;
+        }
+    },
+    &quot;slots&quot;: {
+        &quot;temp&quot;: {
+            &quot;label&quot;: &quot;Temperature Tracker&quot;,
+            &quot;summary&quot;: null,
+            &quot;tracker&quot;: null,
+            &quot;required&quot;: true,
+            &quot;recommended&quot; : {
+                &quot;label&quot; : &quot;Temp&quot;,
+                &quot;config&quot; : {
+                    &quot;type&quot; : &quot;numeric&quot;,
+                    &quot;uom&quot; : &quot;celsius&quot;
+                },
+                &quot;color&quot; : &apos;#4A90E2&apos;,
+                &quot;icon&quot; : &quot;flaticon-thermometer21&quot;
+            }
+        }
+    }
+};
+</code></pre><ul>
+<li><strong>id</strong> - A unique identifier for your cloud app. Note, if you&apos;d like to allow your cloud app to be installed multiple times, add a random string to the end of the id. For example: <code>id : &quot;io.nomie.weather.&quot;+Math.random(),</code></li>
+<li><strong>name</strong> The name of your app, this is used throughout Nomie,</li>
+<li><strong>img</strong> A full url to a square avatar no larger than 1000x1000 and no smaller than 500x500. Allowed types: SVG, PNG</li>
+<li><strong>summary</strong> A summary about your cloud app. Markdown is supported</li>
+<li><strong>uses</strong> [<strong>last-location</strong>,<strong>api</strong>, <strong>geo</strong>] - an Array of items needed for your experiment. Available options are: <code>last-location</code> users last known location, <code>api</code> the users api key (if available), <code>geo</code> geo location data included with events</li>
+<li><strong>color</strong> A hex color - avoid light colors,</li>
+<li><strong>hostedBy</strong>: Name of the person / company responsible for this cloud app,</li>
+<li><strong>join</strong>: <strong>&quot;<a href="https://myurl.com/join.json" target="_blank">https://myurl.com/join.json</a>&quot;</strong> The url to this current document,</li>
+<li><strong>more</strong>: <strong>&quot;<a href="https://myurl.com" target="_blank">https://myurl.com</a>&quot;</strong> A link to your marketing website</li>
+<li><strong>privacy</strong> : <strong>&quot;<a href="https://myurl.com/privacy" target="_blank">https://myurl.com/privacy</a>&quot;</strong> A link to your privacy policy</li>
+<li><strong>collection</strong> - Defines how this app will be collecting data from the user.<ul>
+<li><strong>method</strong>  automatic or manual</li>
+<li><strong>frequency</strong>: <strong>1d</strong> - every 1 day. Options 5h (hours), 22m (22 minutes), 1mm (1 month),</li>
+<li><strong>url</strong>: <strong><a href="https://api.nomie.io/apps/weather" target="_blank">https://api.nomie.io/apps/weather</a></strong>,</li>
+<li><strong>amount</strong>: <strong>1d</strong> how far back should data be pulled -</li>
+</ul>
+</li>
+<li><strong>info</strong> - object to define the additional information this cloud app needs from the user. For example: an email and password, a toggle switch (boolean) or a list of options (select).<ul>
+<li><strong>units</strong>  - the key for this input<ul>
+<li><strong>type</strong> : <strong>select</strong> - options (boolean, text, password, select),</li>
+<li><strong>value</strong> : <strong>fahrenheit</strong>, - pre-filled value</li>
+<li><strong>options</strong> - Array of label,value pairs<ul>
+<li>{ label: <strong>Fahrenheit</strong>, value: <strong>fahrenheit</strong>},</li>
+<li>{ label: <strong>Celcius</strong>, value: <strong>celcius</strong>},</li>
+</ul>
+</li>
+<li><strong>label</strong> : <strong>Unit of Measure</strong> - Label/Name of the input</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>slots</strong>: Slots hold trackers you want to capture<ul>
+<li><strong>temp</strong>: Key for the specific tracker slot<ul>
+<li><strong>label</strong>: &quot;<strong>Temperature Tracker</strong>&quot;,</li>
+<li><strong>summary</strong>: &quot;Describe what this field if needed&quot;</li>
+<li><strong>tracker</strong>: null - leave null</li>
+<li><strong>required</strong>: true</li>
+<li><strong>recommended</strong> - Optional - recommend a tracker to install if the user doesn&apos;t alreay have one installed for this type of app.<ul>
+<li><strong>label</strong> : <strong>&quot;Temp&quot;</strong> - recommended label</li>
+<li><strong>config</strong> : Tracker configuration<ul>
+<li><strong>type</strong> : <strong>(numeric|timer|range|tick)</strong>,</li>
+<li><strong>uom</strong> : <strong>celsius</strong> <a href="https://github.com/happydata/nomie-uom" target="_blank">(see all Nomie UOMs)</a></li>
+</ul>
+</li>
+<li><strong>color</strong> : &apos;#4A90E2&apos;</li>
+<li><strong>icon</strong> : <strong>flaticon-thermometer21</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="responding-to-nomie">Responding to Nomie</h2>
+<p>The response from your Cloud App needs to be a simple JSON response (examples below). There are a few different ways to responde to the user.</p>
+<ol>
+<li><strong>HTML</strong> Display a block of HTML to the user within Nomie.</li>
+<li><strong>Notification</strong> Display a small toast notification</li>
+<li><strong>Link</strong> Take to a specific web page.</li>
+</ol>
+<h3 id="showing-html">Showing HTML</h3>
+<pre><code>{
+   title : &quot;My response page title&quot;,
+   html: &quot;&lt;div class=&apos;text-bold&apos;&gt;Hello World&lt;/div&gt;&quot;
+}
+</code></pre><h2 id="notification">Notification</h2>
+<pre><code>{
+   notify: &quot;Hello World&quot;
+}
+</code></pre><h2 id="open-url">Open URL</h2>
+<pre><code>{
+   link: &quot;https://nomie.io&quot;
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Introduction.html" class="navigation navigation-prev " aria-label="Previous page: Development">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="nomie-commands.html" class="navigation navigation-next " aria-label="Next page: Commands">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cloud Apps","level":"1.2.1","depth":2,"next":{"title":"Commands","level":"1.2.2","depth":2,"path":"development/nomie-commands.md","ref":"development/nomie-commands.md","articles":[]},"previous":{"title":"Development","level":"1.2","depth":1,"path":"development/Introduction.md","ref":"development/Introduction.md","articles":[{"title":"Cloud Apps","level":"1.2.1","depth":2,"path":"development/cloud-apps.md","ref":"development/cloud-apps.md","articles":[]},{"title":"Commands","level":"1.2.2","depth":2,"path":"development/nomie-commands.md","ref":"development/nomie-commands.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"development/cloud-apps.md","mtime":"2017-01-23T16:51:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-11T15:49:39.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

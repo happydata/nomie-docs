@@ -1,5 +1,3 @@
-![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
-
 **Get Nomie**
 
 - [Nomie Pro Android](https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en)
@@ -42,3 +40,5 @@ Track your Coffee usage - use code: ``noah``
 - [Big Spender (js)](https://github.com/happydata/cloudapp-bigspender) - track weekly spending
 - [Weather Tracker (js)](https://github.com/happydata/cloudapp-weather) - automatically track the weather
 - [PHP Sample Cloud App (php)](https://github.com/happydata/cloudapp-php-example) - a super simple  PHP example
+
+![](http://cdn.nomie.io.s3.amazonaws.com/logos/2.0/nomie-logo-horizontal.png)
