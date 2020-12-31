@@ -1,3 +1,5 @@
+# DEPRECATED - Nomie 2 is no longer support, these docs are considered usely for the current version https://nomie.app - for the latest check out https://github.com/open-nomie/nomie
+
 ![](https://cdn.nomie.io/logos/2.0/nomie-logo-horizontal.png)
 
 # What is Nomie?
